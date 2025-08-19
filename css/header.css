@@ -1,0 +1,38 @@
+/* header.css */
+:root{
+  --text:#e5e7eb;
+  --muted:#94a3b8;
+  --brand:#22d3ee;
+  --border:rgba(255,255,255,.06);
+}
+*{box-sizing:border-box}
+html,body{margin:0;font-family:system-ui,Segoe UI,Roboto,Arial;background:#0f172a;color:var(--text)}
+.container{width:min(1100px,94%);margin:0 auto;display:flex;align-items:center;gap:12px;padding:12px 0}
+
+/* header */
+.site-header{position:sticky;top:0;background:rgba(17,24,39,.78);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);z-index:50}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text);font-weight:700}
+.brand .logo{width:36px;height:36px;border-radius:8px;background:linear-gradient(135deg,var(--brand),#f59e0b)}
+
+/* nav */
+.main-nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+.main-nav a{color:var(--text);text-decoration:none;font-weight:600;padding:8px 6px;border-radius:8px}
+.main-nav a:hover, .main-nav a:focus{color:var(--brand);background:rgba(255,255,255,.02);outline:none}
+
+/* mobile button */
+.menu-btn{display:none;margin-left:auto;padding:8px 10px;border-radius:8px;border:1px solid rgba(255,255,255,.08);background:transparent;color:var(--text);cursor:pointer;font-size:16px}
+#menu-toggle{display:none}
+
+/* mobile layout */
+@media (max-width:720px){
+  .container{padding:12px 16px}
+  .main-nav{display:none;position:absolute;left:0;right:0;top:64px;background:rgba(17,24,39,.98);padding:16px;border-top:1px solid var(--border)}
+  .main-nav ul{flex-direction:column;gap:12px}
+  .menu-btn{display:inline-flex}
+  /* mostrar nav cuando checkbox está marcado */
+  #menu-toggle:checked ~ .main-nav{display:block}
+}
+
+/* focus visible */
+a:focus{outline:2px solid rgba(34,211,238,.18);outline-offset:2px}
+

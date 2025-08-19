@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nav — Mi Página</title>
+  <link rel="stylesheet" href="css/header.css" />
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container">
+      <a class="brand" href="seccion.html" aria-label="Ir a la sección principal">
+        <span class="logo" aria-hidden="true"></span>
+        <span>Mi Página</span>
+      </a>
+
+      <!-- Checkbox hack para menú móvil (sin JS) -->
+      <input id="menu-toggle" type="checkbox" aria-hidden="true" />
+      <label for="menu-toggle" class="menu-btn" aria-hidden="true" tabindex="0" aria-label="Abrir menú">☰</label>
+
+      <nav class="main-nav" aria-label="Navegación principal">
+        <ul>
+          <li><a href="seccion.html">Inicio</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#acerca">Acerca</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="padding:48px 16px;">
+    <h2>Esta página contiene solo el nav</h2>
+    <p>Pulsa el logo o <a href="seccion.html">aquí</a> para ir a la página con la sección principal.</p>
+  </main>
+</body>
+</html>
+
